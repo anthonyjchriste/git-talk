@@ -1,0 +1,12 @@
+.idea
+auxil
+out
+*.iml
+*.aux
+*.log
+*.out
+*.nav
+*.pdf
+*.snm
+*.gz
+*.toc
