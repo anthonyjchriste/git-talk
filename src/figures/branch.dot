@@ -1,0 +1,16 @@
+digraph branch {
+    subgraph cluster_repo {
+        label = "Alice's GitHub Repository";
+        Master [label="Master Branch", shape="square"]
+        Feature [label="Feature Branch", shape="square"]
+        Bug [label="Bug Branch", shape="square"]
+    }
+
+    Alice -> Feature [label="push feature addition"]
+    Bob -> Bug[label="push bug fix"]
+    Master -> Feature [label="New feature branch"]
+    Feature -> Master [label="Merge feature branch into master"]
+
+    Master -> Bug [label="New bug branch"]
+    Bug -> Master [label="Merge bug branch into master"]
+}

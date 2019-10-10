@@ -1,0 +1,12 @@
+digraph single_repo {
+    Repo [label="Alice's GitHub Repository", shape="square"]
+
+    Alice -> Repo [label="push"]
+    Repo -> Alice [label="pull"]
+
+    Bob -> Repo [label="push"]
+    Repo -> Bob [label="pull"]
+
+    Anthony -> Repo [label="push"]
+    Repo -> Anthony [label="pull"]
+}

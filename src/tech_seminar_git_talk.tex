@@ -47,9 +47,9 @@
         \end{itemize}
     \end{frame}
 
-    \begin{frame}{Talk Outline}
-        \tableofcontents
-    \end{frame}
+%    \begin{frame}{Talk Outline}
+%        \tableofcontents
+%    \end{frame}
 
     \section{Why Version Control?}\label{sec:why-version-control?}
     \begin{frame}{Why Version Control?}
@@ -166,7 +166,7 @@
         \end{columns}
     \end{frame}
 
-    \section{An Interlude on git Terminology}
+    \section{An Interlude on git Terminology}\label{sec:an-interlude-on-git-terminology}
     \begin{frame}{Common git Terminology}
         General workflow
         \begin{itemize}
@@ -180,12 +180,13 @@
         Less general, but still useful
         \begin{itemize}
             \item merge - Merge multiple changes
-            \item branches -
+            \item branches - Multiple histories
+            \item fork - Create your own copy of someone else's repo
             \item pull request - Review of changes before merging into master branch
         \end{itemize}
     \end{frame}
 
-    \section{GitHub Desktop}
+    \section{GitHub Desktop}\label{sec:github-desktop}
     \begin{frame}{GitHub Desktop}
         \begin{columns}
             \column{0.3\textwidth}
@@ -265,9 +266,6 @@
             \end{figure}
         \end{columns}
     \end{frame}
-
-%    \begin{frame}{Upload an Existing Repository}
-%    \end{frame}
 
     \section{Add, commit, \& push changes}
     \begin{frame}{Adding Changes}
@@ -368,11 +366,25 @@
         \end{columns}
     \end{frame}
 
+    \section{Ctlz-Z on Steroids}
     \begin{frame}{Going Back in Time}
+        \begin{figure}
+            \centering
+            \includegraphics[width=0.8\textwidth]{figures/revert_1.png}
+        \end{figure}
         \centering
         GitHub Desktop makes it easy to revert to a previous commit
     \end{frame}
 
+    \begin{frame}{Going Back in Time}
+        \begin{figure}
+            \centering
+            \includegraphics[width=\textwidth]{figures/revert_2.png}
+        \end{figure}
+        \centering
+    \end{frame}
+
+    \section{The Ever Dreaded Merge Conflict}\label{sec:the-ever-dreaded-merge-conflict}
     \begin{frame}{Merge Conflicts}
         Merge conflicts occur when one or more people edit the same file
         \begin{itemize}
@@ -391,24 +403,103 @@
         \end{figure}
     \end{frame}
 
+    \begin{frame}{Merge Conflicts}
+        \begin{figure}
+            \centering
+            \includegraphics[width=\textwidth]{figures/merge_2.png}
+        \end{figure}
+    \end{frame}
+
+    \begin{frame}{Merge Conflicts}
+        \begin{figure}
+            \centering
+            \includegraphics[width=0.7\textwidth]{figures/merge_3.png}
+        \end{figure}
+    \end{frame}
+
+    \begin{frame}{Merge Conflicts}
+        \begin{figure}
+            \centering
+            \includegraphics[width=\textwidth]{figures/merge_4.png}
+        \end{figure}
+    \end{frame}
+
+    \begin{frame}{Merge Conflicts}
+        \begin{figure}
+            \centering
+            \includegraphics[width=\textwidth]{figures/merge_5.png}
+        \end{figure}
+    \end{frame}
+
     \section{Repository Strategies}\label{sec:repository-strategies}
     \begin{frame}{A Single GitHub Repository}
+        \begin{columns}
+            \column{0.6\textwidth}
+            Pros
+            \begin{itemize}
+                \item Most simple approach
+            \end{itemize}
+
+            Cons
+            \begin{itemize}
+                \item Requires GitHub user management
+                \item Easier to step on others' code
+            \end{itemize}
+
+            \column{0.4\textwidth}
+            \begin{figure}
+                \centering
+                \includegraphics[width=\textwidth]{figures/single_repo.png}
+            \end{figure}
+        \end{columns}
+
+        \centering
+        This is what we've been doing so far
+    \end{frame}
+
+    \begin{frame}{Forking}
         Pros
         \begin{itemize}
-            \item Most simple approach
+            \item Can work on the code base independently from ``upstream"
+            \item Encourages ``pull requests" and code review
         \end{itemize}
 
         Cons
         \begin{itemize}
-            \item Requires GitHub user management
-            \item Easier to step on others' code
+            \item Slightly more complicated
+            \item Need to manage staying up-to-date with ``upstream"
         \end{itemize}
     \end{frame}
 
     \begin{frame}{Forking}
+        \begin{figure}
+            \centering
+            \includegraphics[width=0.6\textwidth]{figures/fork.png}
+        \end{figure}
     \end{frame}
 
     \begin{frame}{Branching}
+        It's possible to create branches that branch off the ``master" branch
+
+        Pros
+        \begin{itemize}
+            \item Can work independently from master or other branches
+            \item Works both with a single repository and forks
+            \item Separate branches for bugs, features, etc
+            \item Useful to name branches after issues
+        \end{itemize}
+
+        Cons
+        \begin{itemize}
+            \item Slightly more complicated
+        \end{itemize}
+    \end{frame}
+
+    \begin{frame}{Branching}
+        \begin{figure}
+            \centering
+            \includegraphics[width=\textwidth]{figures/branch.png}
+        \end{figure}
     \end{frame}
 
     \section{Other Tips}\label{sec:other-tips}
@@ -440,7 +531,11 @@
 
     \section{Project Management}\label{sec:project-management}
     \begin{frame}{GitHub Issues}
-
+        \begin{itemize}
+            \item Centralized issue management
+            \item Easy collaboration with team
+            \item Integrated with git commits
+        \end{itemize}
     \end{frame}
 
     \begin{frame}{GitHub Issues}
@@ -495,6 +590,12 @@
 
     \section{Resources}\label{sec:resources}
     \begin{frame}{Resources}
+        \begin{itemize}
+            \item \url{https://guides.github.com/}
+            \item \url{https://help.github.com/en/desktop}
+            \item \url{https://git-scm.com/doc}
+            \item \url{https://www.atlassian.com/git/tutorials}
+        \end{itemize}
     \end{frame}
 
     \begin{frame}{Thank You!}
@@ -502,6 +603,8 @@
         Questions?
 
         \href{mailto:anthony.christe@gmail.com}{anthony.christe@gmail.com}
+
+        Feel free to fork and improve this talk \url{https://github.com/anthonyjchriste/git-talk}
     \end{frame}
 
 

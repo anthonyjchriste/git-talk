@@ -1,0 +1,18 @@
+digraph fork {
+    Repo [label="Alice's Upstream GitHub Repository", shape="square"]
+    BobRepo [label="Bob's Forked Repository", shape="square"]
+    AnthonyRepo [label="Anthony's Forked Repository", shape="square"]
+
+    Alice -> Repo [label="push"]
+    Repo -> Alice [label="pull"]
+
+    Bob -> BobRepo [label="push"]
+    BobRepo -> Bob [label="pull"]
+    BobRepo -> Repo [label="pull request"]
+    Repo -> BobRepo [label="Upstream updates"]
+
+    Anthony -> AnthonyRepo [label="push"]
+    AnthonyRepo -> Anthony [label="pull"]
+    AnthonyRepo -> Repo [label="pull request"]
+    Repo -> AnthonyRepo [label="Upstream updates"]
+}
