@@ -47,6 +47,10 @@
         \end{itemize}
     \end{frame}
 
+    \begin{frame}{Talk Outline}
+        \tableofcontents
+    \end{frame}
+
     \section{Why Version Control?}\label{sec:why-version-control?}
     \begin{frame}{Why Version Control?}
         \textbf{Alice}: Hey Anthony, can you add Foo to ScienceStuff.m?
@@ -60,8 +64,8 @@
         \textbf{Anthony}: :-(
     \end{frame}
 
-    \section{What is Git?}\label{sec:what-is-git?}
-    \begin{frame}{Git}
+    \section{git}\label{sec:what-is-git?}
+    \begin{frame}{git}
         ``git" is a Distributed Version Control System (DVCS)
         \begin{columns}
             \column{0.7\textwidth}
@@ -110,9 +114,6 @@
                 \includegraphics[width=\textwidth]{figures/linus.jpg}
             \end{figure}
         \end{columns}
-
-
-
     \end{frame}
 
     \section{GitHub}\label{sec:github}
@@ -148,48 +149,293 @@
     \end{frame}
 
     \begin{frame}{Creating a Repository}
+        After logging into GitHub\ldots
+        \begin{columns}
+            \column{0.5\textwidth}
+            \begin{figure}
+                \centering
+                \includegraphics[width=\textwidth]{figures/github_new_1.png}
+            \end{figure}
+
+            \column{0.5\textwidth}
+            \begin{figure}
+                \centering
+                \includegraphics[width=\textwidth]{figures/github_new_2.png}
+            \end{figure}
+
+        \end{columns}
     \end{frame}
 
-    \section{GitHub Desktop}\label{sec:github-desktop}
-    \begin{frame}{GitHub Desktop}
+    \section{An Interlude on git Terminology}
+    \begin{frame}{Common git Terminology}
+        General workflow
         \begin{itemize}
-            \item Cross-platform, open-source git client
-            \item Graphical interface to most of git's features
-            \item
+            \item clone - Copy history of remote repo
+            \item pull - Update changes from remote to local repo
+            \item add - Stage changes to local repo
+            \item commit - Commit changes to local repo
+            \item push - Push changes to remote repo
+        \end{itemize}
+
+        Less general, but still useful
+        \begin{itemize}
+            \item merge - Merge multiple changes
+            \item branches -
+            \item pull request - Review of changes before merging into master branch
         \end{itemize}
     \end{frame}
 
+    \section{GitHub Desktop}
+    \begin{frame}{GitHub Desktop}
+        \begin{columns}
+            \column{0.3\textwidth}
+            \begin{itemize}
+                \item GUI for git
+                \item Cross-platform
+                \item Open-source
+            \end{itemize}
+
+            \column{0.7\textwidth}
+            \begin{figure}
+                \centering
+                \includegraphics[width=\textwidth]{figures/github-desktop-screenshot-mac.png}
+            \end{figure}
+        \end{columns}
+        \centering
+        \url{https://desktop.github.com/}
+
+        \url{https://help.github.com/en/desktop/getting-started-with-github-desktop/setting-up-github-desktop}
+    \end{frame}
+
+    \begin{frame}{Don't Fear the CLI}
+        GitHub Desktop makes it easy to manage git repositories. That said, it is useful to play around with and understand git's Command Line Interface (CLI).
+        \begin{itemize}
+            \item You're on a platform that doesn't support GitHub Desktop
+            \item You're SSHed into a server somewhere
+            \item Most git related solutions on Google and Stack Overflow use the CLI
+        \end{itemize}
+    \end{frame}
+
+    \section{Cloning a Respository}
     \begin{frame}{Cloning a Repository}
+        \begin{columns}
+            \column{0.5\textwidth}
+            \begin{itemize}
+                \item Open GitHub Desktop
+                \item Log-In / Configure
+                \item Clone
+            \end{itemize}
+
+            \column{0.5\textwidth}
+            \begin{figure}
+                \centering
+                \includegraphics[width=\textwidth]{figures/clone_1.png}
+            \end{figure}
+        \end{columns}
     \end{frame}
 
-    \begin{frame}{Upload an Existing Repository}
+    \begin{frame}{Cloning a Repository}
+        \begin{columns}
+            \column{0.5\textwidth}
+            \begin{figure}
+                \centering
+                \includegraphics[width=\textwidth]{figures/clone_2.png}
+            \end{figure}
+
+            \column{0.5\textwidth}
+            \begin{figure}
+                \centering
+                \includegraphics[width=\textwidth]{figures/clone_3.png}
+            \end{figure}
+        \end{columns}
     \end{frame}
 
-    \begin{frame}{Getting Changes}
+    \begin{frame}{Cloning a Repository}
+        \begin{columns}
+            \column{0.5\textwidth}
+            \begin{figure}
+                \centering
+                \includegraphics[width=\textwidth]{figures/clone_4.png}
+            \end{figure}
+
+            \column{0.5\textwidth}
+            \begin{figure}
+                \centering
+                \includegraphics[width=\textwidth]{figures/clone_5.png}
+            \end{figure}
+        \end{columns}
     \end{frame}
 
+%    \begin{frame}{Upload an Existing Repository}
+%    \end{frame}
+
+    \section{Add, commit, \& push changes}
     \begin{frame}{Adding Changes}
+        First, add a ``README.md" file.
+        \begin{itemize}
+            \item Add a project description
+            \item Commit the changes
+            \item Push the changes
+        \end{itemize}
+
+        Next, add a ``pmotion.py" file
+        \begin{itemize}
+            \item Add the code
+            \item Commit the changes
+            \item Push the changes
+        \end{itemize}
+    \end{frame}
+
+    \begin{frame}{Adding Changes (README.md)}
+        \begin{figure}
+            \centering
+            \includegraphics[width=\textwidth]{figures/add_1.png}
+        \end{figure}
+        \centering
+        Add the project description
+    \end{frame}
+
+    \begin{frame}{Adding Changes (README.md)}
+        \begin{figure}
+            \centering
+            \includegraphics[width=0.8\textwidth]{figures/add_2.png}
+        \end{figure}
+
+        \centering
+        Commit the changes
+    \end{frame}
+
+    \begin{frame}{Adding Changes (README.md)}
+        \begin{figure}
+            \centering
+            \includegraphics[width=0.8\textwidth]{figures/add_3.png}
+        \end{figure}
+
+        \centering
+        Push the changes
+    \end{frame}
+
+    \begin{frame}{Adding Changes (pmotion.py)}
+        \begin{figure}
+            \centering
+            \includegraphics[width=\textwidth]{figures/add_4.png}
+        \end{figure}
+        \centering
+        Add the code
+    \end{frame}
+
+    \begin{frame}{Adding Changes (pmotion.py)}
+        \begin{figure}
+            \centering
+            \includegraphics[width=0.8\textwidth]{figures/add_5.png}
+        \end{figure}
+
+        \centering
+        Commit the changes
+    \end{frame}
+
+    \begin{frame}{Adding Changes (pmotion.py)}
+        \begin{figure}
+            \centering
+            \includegraphics[width=0.8\textwidth]{figures/add_3.png}
+        \end{figure}
+
+        \centering
+        Push the changes
+    \end{frame}
+
+    \begin{frame}{Fetching/Pulling Changes}
+            \begin{itemize}
+                \item Someone makes changes to your code
+                \item They push their changes to GitHub
+                \item ``fetch" and ``pull" to get their changes
+            \end{itemize}
+    \end{frame}
+
+    \begin{frame}{Fetching/Pulling Changes}
+        \begin{columns}
+            \column{0.5\textwidth}
+            \begin{figure}
+                \centering
+                \includegraphics[width=\textwidth]{figures/pull_1.png}
+            \end{figure}
+
+            \column{0.5\textwidth}
+            \begin{figure}
+                \centering
+                \includegraphics[width=\textwidth]{figures/pull_2.png}
+            \end{figure}
+        \end{columns}
+    \end{frame}
+
+    \begin{frame}{Going Back in Time}
     \end{frame}
 
     \begin{frame}{Merge Conflicts}
+        Merge conflicts occur when one or more people edit the same file
+        \begin{itemize}
+            \item Alice and Bob both clone a repo from GitHub
+            \item Alice and Bob both make changes locally
+            \item Bob pushed his changes before Alice
+            \item Alice tries to push her changes, but runs into a merge conflict with Bob's changes!
+        \end{itemize}
+        Before Alice can push her changes, she needs to pull Bob's changes and merge them with her own.
     \end{frame}
 
-    \begin{frame}{Branches}
+    \begin{frame}{Merge Conflicts}
+        \begin{figure}
+            \centering
+            \includegraphics[width=\textwidth]{figures/merge_1.png}
+        \end{figure}
+    \end{frame}
+
+    \section{Repository Strategies}
+    \begin{frame}{A Single Repository}
+
+    \end{frame}
+
+    \begin{frame}{Forking}
+    \end{frame}
+
+    \begin{frame}{Branching}
+    \end{frame}
+
+    \section{Other Tips}
+    \begin{frame}{.gitignore}
+        In general, the following items should not be stored in a repository
+        \begin{itemize}
+            \item Binary files (data files)
+            \item Sensitive information
+            \item Build files
+            \item IDE files
+        \end{itemize}
     \end{frame}
 
     \begin{frame}{.gitignore}
+        \begin{figure}
+            \centering
+            \includegraphics[width=0.7\textwidth]{figures/gitignore.png}
+        \end{figure}
+        \centering
+        Create a file called ``.gitignore" in your repository root
     \end{frame}
 
+    \begin{frame}{Private Repositories}
+    \end{frame}
+
+    \section{Project Management}
     \begin{frame}{Project Management}
     \end{frame}
 
-    \begin{frame}{Quick Review}
-    \end{frame}
-
+    \section{Resources}
     \begin{frame}{Resources}
     \end{frame}
 
     \begin{frame}{Thank You!}
+        \centering
+        Questions?
+
+        \href{mailto:anthony.christe@gmail.com}{anthony.christe@gmail.com}
     \end{frame}
 
 
