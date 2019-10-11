@@ -47,10 +47,6 @@
         \end{itemize}
     \end{frame}
 
-%    \begin{frame}{Talk Outline}
-%        \tableofcontents
-%    \end{frame}
-
     \section{Why Version Control?}\label{sec:why-version-control?}
     \begin{frame}{Why Version Control?}
         \textbf{Alice}: Hey Anthony, can you add Foo to ScienceStuff.m?
@@ -217,7 +213,7 @@
         \end{itemize}
     \end{frame}
 
-    \section{Cloning a Respository}
+    \section{Cloning a Respository}\label{sec:cloning-a-respository}
     \begin{frame}{Cloning a Repository}
         \begin{columns}
             \column{0.5\textwidth}
@@ -267,7 +263,7 @@
         \end{columns}
     \end{frame}
 
-    \section{Add, commit, \& push changes}
+    \section{Add, commit, \& push changes}\label{sec:add,-commit,&push-changes}
     \begin{frame}{Adding Changes}
         First, add a ``README.md" file.
         \begin{itemize}
@@ -366,7 +362,7 @@
         \end{columns}
     \end{frame}
 
-    \section{Ctlz-Z on Steroids}
+    \section{Ctlz-Z on Steroids}\label{sec:ctlz-z-on-steroids}
     \begin{frame}{Going Back in Time}
         \begin{figure}
             \centering
@@ -428,77 +424,6 @@
         \begin{figure}
             \centering
             \includegraphics[width=\textwidth]{figures/merge_5.png}
-        \end{figure}
-    \end{frame}
-
-    \section{Repository Strategies}\label{sec:repository-strategies}
-    \begin{frame}{A Single GitHub Repository}
-        \begin{columns}
-            \column{0.6\textwidth}
-            Pros
-            \begin{itemize}
-                \item Most simple approach
-            \end{itemize}
-
-            Cons
-            \begin{itemize}
-                \item Requires GitHub user management
-                \item Easier to step on others' code
-            \end{itemize}
-
-            \column{0.4\textwidth}
-            \begin{figure}
-                \centering
-                \includegraphics[width=\textwidth]{figures/single_repo.png}
-            \end{figure}
-        \end{columns}
-
-        \centering
-        This is what we've been doing so far
-    \end{frame}
-
-    \begin{frame}{Forking}
-        Pros
-        \begin{itemize}
-            \item Can work on the code base independently from ``upstream"
-            \item Encourages ``pull requests" and code review
-        \end{itemize}
-
-        Cons
-        \begin{itemize}
-            \item Slightly more complicated
-            \item Need to manage staying up-to-date with ``upstream"
-        \end{itemize}
-    \end{frame}
-
-    \begin{frame}{Forking}
-        \begin{figure}
-            \centering
-            \includegraphics[width=0.6\textwidth]{figures/fork.png}
-        \end{figure}
-    \end{frame}
-
-    \begin{frame}{Branching}
-        It's possible to create branches that branch off the ``master" branch
-
-        Pros
-        \begin{itemize}
-            \item Can work independently from master or other branches
-            \item Works both with a single repository and forks
-            \item Separate branches for bugs, features, etc
-            \item Useful to name branches after issues
-        \end{itemize}
-
-        Cons
-        \begin{itemize}
-            \item Slightly more complicated
-        \end{itemize}
-    \end{frame}
-
-    \begin{frame}{Branching}
-        \begin{figure}
-            \centering
-            \includegraphics[width=\textwidth]{figures/branch.png}
         \end{figure}
     \end{frame}
 
@@ -586,6 +511,133 @@
         \end{figure}
         \centering
         Example: https://github.com/openpowerquality/opq/projects/6
+    \end{frame}
+
+    \section{Repository Strategies}\label{sec:repository-strategies}
+    \begin{frame}{A Single GitHub Repository}
+        \begin{columns}
+            \column{0.6\textwidth}
+            Pros
+            \begin{itemize}
+                \item Most simple approach
+            \end{itemize}
+
+            Cons
+            \begin{itemize}
+                \item Requires GitHub user management
+                \item Easier to step on others' code
+            \end{itemize}
+
+            \column{0.4\textwidth}
+            \begin{figure}
+                \centering
+                \includegraphics[width=\textwidth]{figures/single_repo.png}
+            \end{figure}
+        \end{columns}
+
+        \centering
+        This is what we've been doing so far
+    \end{frame}
+
+    \begin{frame}{Forking}
+        Pros
+        \begin{itemize}
+            \item Can work on the code base independently from ``upstream"
+            \item Encourages ``pull requests" and code review
+        \end{itemize}
+
+        Cons
+        \begin{itemize}
+            \item Slightly more complicated
+            \item Need to manage staying up-to-date with ``upstream"
+        \end{itemize}
+    \end{frame}
+
+    \begin{frame}{Forking}
+        \begin{figure}
+            \centering
+            \includegraphics[width=0.6\textwidth]{figures/fork.png}
+        \end{figure}
+    \end{frame}
+
+    \begin{frame}{Forking: An Example}
+        \begin{figure}
+            \centering
+            \includegraphics[width=0.6\textwidth]{figures/fork_me.png}
+        \end{figure}
+        \centering
+        Fork this repo:
+
+        \url{https://github.com/anthonyjchriste/perpetual-motion-proof}
+    \end{frame}
+
+    \begin{frame}{Forking: An Example}
+        Using what you've learned\ldots
+        \begin{itemize}
+            \item Clone this newly forked repository
+            \item Add a file [your\_name].txt and put whatever you want in it
+            \item Commit and push these changes back to your forked repo
+        \end{itemize}
+    \end{frame}
+
+    \begin{frame}{Forking: An Example}
+        \begin{figure}
+            \centering
+            \includegraphics[width=\textwidth]{figures/pr.png}
+        \end{figure}
+        \centering
+        Create a pull request\ldots
+    \end{frame}
+
+    \begin{frame}{Forking: An Example}
+        \begin{figure}
+            \centering
+            \includegraphics[width=\textwidth]{figures/pr_2.png}
+        \end{figure}
+        \centering
+        Create a pull request\ldots
+    \end{frame}
+
+    \begin{frame}{Forking: An Example}
+        \begin{figure}
+            \centering
+            \includegraphics[width=\textwidth]{figures/pr_3.png}
+        \end{figure}
+        \centering
+        Create a pull request\ldots
+    \end{frame}
+
+    \begin{frame}{Forking: An Example}
+        \begin{figure}
+            \centering
+            \includegraphics[width=\textwidth]{figures/pr_4.png}
+        \end{figure}
+        \centering
+        Create a pull request\ldots
+    \end{frame}
+
+    \begin{frame}{Branching}
+        It's possible to create branches that branch off the ``master" branch
+
+        Pros
+        \begin{itemize}
+            \item Can work independently from master or other branches
+            \item Works both with a single repository and forks
+            \item Separate branches for bugs, features, etc
+            \item Useful to name branches after issues
+        \end{itemize}
+
+        Cons
+        \begin{itemize}
+            \item Slightly more complicated
+        \end{itemize}
+    \end{frame}
+
+    \begin{frame}{Branching}
+        \begin{figure}
+            \centering
+            \includegraphics[width=\textwidth]{figures/branch.png}
+        \end{figure}
     \end{frame}
 
     \section{Resources}\label{sec:resources}
